@@ -219,22 +219,9 @@ const AdminDashboard = () => {
                     placeholder="Enter notification message..."
                   />
                 </div>
-                <button 
-                  type="submit" 
-                  style={{
-                    display: 'block', 
-                    width: '100%', 
-                    padding: '14px 20px',
-                    background: '#0056b3',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '4px',
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    cursor: 'pointer',
-                    marginTop: '20px',
-                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-                  }}
+                <button
+                  type="submit"
+                  className="send-button"
                 >
                   SEND NOTIFICATION
                 </button>
