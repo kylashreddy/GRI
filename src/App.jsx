@@ -53,8 +53,8 @@ function Navbar(){
     setIsMobileMenuOpen(false)
   }
 
-  // Hide notification icon on admin dashboard
-  const showNotificationIcon = isAuthenticated && location.pathname !== '/admin';
+  // Show notification icon only to authenticated users
+  const showNotificationIcon = isAuthenticated;
 
   return (
     <nav className="nav">
