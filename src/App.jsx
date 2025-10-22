@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Routes, Route, NavLink } from 'react-router-dom'
+import { Routes, Route, NavLink, useLocation } from 'react-router-dom'
 import { FiFacebook, FiInstagram, FiLinkedin, FiMail, FiMenu, FiX, FiDownload } from 'react-icons/fi'
 import { AnimatePresence } from 'framer-motion'
 
@@ -26,6 +26,24 @@ import './styles/notifications.css'
 
 function Navbar(){
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    const checkAuth = () => {
+      const authStatus = localStorage.getItem('isUserAuthenticated') === 'true';
+      setIsAuthenticated(authStatus);
+    };
+
+    checkAuth();
+
+    // Listen for storage changes (login/logout)
+    window.addEventListener('storage', checkAuth);
+
+    return () => {
+      window.removeEventListener('storage', checkAuth);
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -34,6 +52,9 @@ function Navbar(){
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
   }
+
+  // Hide notification icon on admin dashboard
+  const showNotificationIcon = isAuthenticated && location.pathname !== '/admin';
 
   return (
     <nav className="nav">
@@ -55,9 +76,11 @@ function Navbar(){
           <NavLink to="/field-visit">Visits</NavLink>
           <NavLink to="/participate">Participate</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <div className="notification-container">
-            <NotificationIcon />
-          </div>
+          {showNotificationIcon && (
+            <div className="notification-container">
+              <NotificationIcon />
+            </div>
+          )}
           <ProfileIcon />
           <AddToHomeScreen />
         </div>
@@ -68,9 +91,11 @@ function Navbar(){
             <div className="profile-container">
               <ProfileIcon />
             </div>
-            <div className="notification-container">
-              <NotificationIcon />
-            </div>
+            {showNotificationIcon && (
+              <div className="notification-container">
+                <NotificationIcon />
+              </div>
+            )}
           </div>
           <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle mobile menu">
             {isMobileMenuOpen ? <FiX /> : <FiMenu />}

@@ -5,3 +5,4 @@
 - [ ] Update buttons to use consistent styling
 - [ ] Update tabs to match website navigation style
 - [ ] Test mobile responsiveness
+- [x] Implement authentication-based notification visibility (notifications only shown to logged-in users)

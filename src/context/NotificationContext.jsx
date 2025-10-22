@@ -13,13 +13,37 @@ export const useNotifications = () => useContext(NotificationContext);
 export const NotificationProvider = ({ children }) => {
   const [notifications, setNotifications] = useState([]);
   const [unreadCount, setUnreadCount] = useState(0);
-  
-  // Load notifications from Firestore on component mount with real-time listening
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // Check authentication status
   useEffect(() => {
+    const checkAuth = () => {
+      const authStatus = localStorage.getItem('isUserAuthenticated') === 'true';
+      setIsAuthenticated(authStatus);
+    };
+
+    checkAuth();
+
+    // Listen for storage changes (login/logout)
+    window.addEventListener('storage', checkAuth);
+
+    return () => {
+      window.removeEventListener('storage', checkAuth);
+    };
+  }, []);
+
+  // Load notifications from Firestore only if authenticated
+  useEffect(() => {
+    if (!isAuthenticated) {
+      setNotifications([]);
+      setUnreadCount(0);
+      return;
+    }
+
     const setupRealtimeListener = () => {
       try {
         const notificationsCollection = collection(db, 'notifications');
-        
+
         // Set up real-time listener
         const unsubscribe = onSnapshot(notificationsCollection, (snapshot) => {
           const firestoreNotifications = snapshot.docs.map(doc => ({
@@ -28,32 +52,32 @@ export const NotificationProvider = ({ children }) => {
             ...doc.data(),
             timestamp: doc.data().createdAt?.toDate?.().toISOString() || doc.data().createdAt
           }));
-          
+
           // Sort by newest first
           firestoreNotifications.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-          
+
           setNotifications(firestoreNotifications);
-          
+
           // Count unread notifications
           const unread = firestoreNotifications.filter(notification => !notification.read).length;
           setUnreadCount(unread);
         });
-        
+
         return unsubscribe;
       } catch (error) {
         console.error('Error setting up notifications listener:', error);
         return null;
       }
     };
-    
+
     const unsubscribe = setupRealtimeListener();
-    
+
     return () => {
       if (unsubscribe) {
         unsubscribe();
       }
     };
-  }, []);
+  }, [isAuthenticated]);
   
   // Save notifications to localStorage whenever they change
   useEffect(() => {
