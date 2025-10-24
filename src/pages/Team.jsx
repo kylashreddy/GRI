@@ -3,7 +3,7 @@ import chair1 from '../assets/chair1.jpg'
 import chair2 from '../assets/chair2.png'
 import chair3 from '../assets/chair3.jpg'
 import chair4 from '../assets/chair4.jpg'
-import arulsir from '../assets/arulsir.png'
+import arulsir from '../assets/arulsir_1.jpg'
 import beemsir from '../assets/beemsir.jpg'
 
 export default function Team(){
@@ -13,7 +13,7 @@ export default function Team(){
     {name : 'Dr.victhitram', role: 'Assistant Professor CIVIL', image: '/assets/faculty-5.jpg'},  
     { name: 'Ms. Agashini V. Kumar', role: 'Assistant Professor CSE', image: '/assets/faculty-3.jpg'},
     { name: 'Ms. Savitha R', role: 'Assistant Professor EEE', image: '/assets/faculty-4.jpg'},
-    {nam}
+    {name : 'Prof. Geetha Rani', role: 'Assistant Professor CSE', image: '/assets/faculty-6.jpg'},
   ];
 
   const honoraryChair = [
