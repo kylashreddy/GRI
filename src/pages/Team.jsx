@@ -10,7 +10,7 @@ export default function Team(){
   const facultyMembers = [
     { name: 'Dr. M John Basha', role: 'Assistant Professor CSE', image: '/assets/faculty-1.jpg'},
     { name: 'Dr. Sowmya M S', role: 'Assistant Professor CSE', image: '/assets/faculty-2.jpg'},
-    {name : 'Dr.victhitram', role: 'Assistant Professor CIVIL', image: '/assets/faculty-5.jpg'},  
+    {name : 'Dr.Victhitra M', role: 'Assistant Professor CIVIL', image: '/assets/faculty-5.jpg'},  
     { name: 'Ms. Agashini V. Kumar', role: 'Assistant Professor CSE', image: '/assets/faculty-3.jpg'},
     { name: 'Ms. Savitha R', role: 'Assistant Professor EEE', image: '/assets/faculty-4.jpg'},
     {name : 'Prof. Geetha Rani', role: 'Assistant Professor CSE', image: '/assets/faculty-6.jpg'},
