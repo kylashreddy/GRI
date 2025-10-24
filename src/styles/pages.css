@@ -230,11 +230,9 @@
 .faculty-section h3, .honourable-section h3 {
   text-align: center;
   font-size: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
   padding: 0 20px 10px;
 }
 
