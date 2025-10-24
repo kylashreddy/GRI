@@ -10,26 +10,28 @@ export default function Team(){
   const facultyMembers = [
     { name: 'Dr. M John Basha', role: 'Assistant Professor CSE', image: '/assets/faculty-1.jpg'},
     { name: 'Dr. Sowmya M S', role: 'Assistant Professor CSE', image: '/assets/faculty-2.jpg'},
+    {name : 'Dr.victhitram', role: 'Assistant Professor CIVIL', image: '/assets/faculty-5.jpg'},  
     { name: 'Ms. Agashini V. Kumar', role: 'Assistant Professor CSE', image: '/assets/faculty-3.jpg'},
     { name: 'Ms. Savitha R', role: 'Assistant Professor EEE', image: '/assets/faculty-4.jpg'},
-    ];
+    {nam}
+  ];
 
   const honoraryChair = [
-    { name: 'Prof. Anjula Gurtoo', role: 'Honorary chair of GRI and Professor & Chair, Lab for Sustainable Solutions Department of Management Studies, Indian Institute of Science, Bangalore', image: chair4 }
+    { name: 'Prof. Anjula Gurtoo', role: 'Professor & Chair, Lab for Sustainable Solutions Department of Management Studies, Indian Institute of Science, Bangalore', image: chair4 }
   ];
 
   const chairMember = [
-    { name: 'Dr.M. Arul Prakasajothi', role: 'Chair Member and Director – Innovation, JAIN University', image: arulsir }
+    { name: 'Dr.M. Arul Prakasajothi', role: 'Chair Person and Director – Innovation, JAIN University', image: arulsir }
   ];
 
   const coChairMember = [
-    { name: 'Dr.N. Beemkumar', role: 'Co-Chair Member and Deputy Dean (Research), JAIN University', image: beemsir }
+    { name: 'Dr.N. Beemkumar', role: 'Co-Chair Person and Deputy Dean (Research), JAIN University', image: beemsir }
   ];
 
   const honoraryMembers = [
-    { name: 'Dr. K. Elangovan ', role: 'Honorary Member of GRI and Assistant Innovation Director, Innovation Cell Ministry of Education', image: chair1 },
-    { name: 'Dr. Gurubalan Annadurai ', role: 'Honorary Member of GRI and Assistant Professor, Department of Energy Science and Engineering(IIT Bombay)', image: chair2 },
-    { name: 'Mr. K. S. Rajamanokar ', role: 'Honorary Member of GRI and CEO of Aquaconnect, Chennai', image: chair3 }
+    { name: 'Dr. K. Elangovan ', role: 'Honorary Mentor of GRI and Assistant Innovation Director, Innovation Cell Ministry of Education', image: chair1 },
+    { name: 'Dr. Gurubalan Annadurai ', role: 'Honorary Mentor of GRI and Assistant Professor, Department of Energy Science and Engineering(IIT Bombay)', image: chair2 },
+    { name: 'Mr. K. S. Rajamanokar ', role: 'Honorary Mentor of GRI and CEO of Aquaconnect, Chennai', image: chair3 }
   ];
 
 
@@ -68,7 +70,7 @@ export default function Team(){
         </div>
 
         {/* Honorary members */}
-        <h3>Honorary members</h3>
+        <h3>Honorary Mentors</h3>
         <div className="honourable-grid">
           {honoraryMembers.map((member, index) => (
             <div key={index} className="honourable-card">
@@ -92,7 +94,7 @@ export default function Team(){
         </div>
 
         {/* Chair */}
-        <h3 style={{textAlign: 'center'}}>Chair Member</h3>
+        <h3 style={{textAlign: 'center'}}>Chair Person</h3>
         <div className="single-card">
           <div className="honourable-card">
             <div className="honourable-color-bar"></div>
@@ -114,7 +116,7 @@ export default function Team(){
         </div>
 
         {/* Co-chair members */}
-        <h3 style={{textAlign: 'center'}}>Co-chair members</h3>
+        <h3 style={{textAlign: 'center'}}>Co-chair Person</h3>
         <div className="single-card">
           <div className="honourable-card">
             <div className="honourable-color-bar"></div>
@@ -138,7 +140,7 @@ export default function Team(){
 
       {/* Faculty Section */}
       <div className="faculty-section">
-        <h3>Faculty Members</h3>
+        <h3>Faculty Co-ordinators</h3>
 
         <div className="faculty-grid">
           {facultyMembers.map((faculty, index) => (
