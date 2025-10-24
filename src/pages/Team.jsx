@@ -16,6 +16,23 @@ export default function Team(){
     {name : 'Prof. Geetha Rani', role: 'Assistant Professor CSE', image: '/assets/faculty-6.jpg'},
   ];
 
+  const studentCoordinators = [
+    { name: 'Dharshan S', department: 'CSE-DS', year: '3rd Year', image: '/assets/student-1.jpg'},
+    { name: 'Busireddy Kylash Reddy', department: 'CSE', year: '3rd Year', image: '/assets/student-2.jpg'},
+    { name: 'Dharmanshoo Chopra', department: 'CSE-DS', year: '3rd Year', image: '/assets/student-3.jpg'},
+    { name: 'Shaarukesh G V', department: 'CSE-DS', year: '3rd Year', image: '/assets/student-4.jpg'},
+    { name: 'V Kusuma', department: 'CSE-DS', year: '3rd Year', image: '/assets/student-5.jpg'},
+    { name: 'Navya S', department: 'CSE* C', year: '3rd Year', image: '/assets/student-6.jpg'},
+    { name: 'Kushal', department: 'CSE-DS', year: '3rd Year', image: '/assets/student-7.jpg'},
+    { name: 'Adithya Gowda', department: 'CSE', year: '2nd Year', image: '/assets/student-8.jpg'},
+    { name: 'Nikhith Gowda', department: 'CSE Cyber Security', year: '2nd Year', image: '/assets/student-9.jpg'},
+    { name: 'Yajamanyam Naga Ashok Kumar Sastri', department: 'CSE-DS', year: '2nd Year', image: '/assets/student-10.jpg'},
+    { name: 'Smriti Shreya', department: 'CSE GEN B', year: '2nd Year', image: '/assets/student-11.jpg'},
+    { name: 'Srishti Mishra', department: 'CSE GEN B', year: '2nd Year', image: '/assets/student-12.jpg'},
+    { name: 'Kanishka J', department: 'CSE-AIDE', year: '2nd Year', image: '/assets/student-13.jpg'},
+    { name: 'Sarika G Pawar', department: 'CSE-AIDE', year: '2nd Year', image: '/assets/student-14.jpg'},
+  ];
+
   const honoraryChair = [
     { name: 'Prof. Anjula Gurtoo', role: 'Professor & Chair, Lab for Sustainable Solutions Department of Management Studies, Indian Institute of Science, Bangalore', image: chair4 }
   ];
@@ -159,6 +176,33 @@ export default function Team(){
                 </div>
                 <h4>{faculty.name}</h4>
                 <p>{faculty.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Student Co-ordinators Section */}
+      <div className="faculty-section">
+        <h3>Student Co-ordinators</h3>
+
+        <div className="faculty-grid">
+          {studentCoordinators.map((student, index) => (
+            <div key={index} className="faculty-card">
+              <div className="faculty-color-bar"></div>
+              <div className="faculty-content">
+                <div className="faculty-avatar">
+                  <img
+                    src={student.image}
+                    alt={student.name}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.parentElement.innerHTML = `<span style="font-size: 28px; font-weight: bold; color: var(--brand);">${student.name.charAt(0)}</span>`;
+                    }}
+                  />
+                </div>
+                <h4>{student.name}</h4>
+                <p>{student.department} - {student.year}</p>
               </div>
             </div>
           ))}
