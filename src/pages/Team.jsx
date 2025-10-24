@@ -21,17 +21,17 @@ export default function Team(){
   ];
 
   const chairMember = [
-    { name: 'Dr.M. Arul Prakasajothi', role: 'Chair Person and Director – Innovation, JAIN University', image: arulsir }
+    { name: 'Dr.M. Arul Prakasajothi', role: 'Director – Innovation, JAIN University', image: arulsir }
   ];
 
   const coChairMember = [
-    { name: 'Dr.N. Beemkumar', role: 'Co-Chair Person and Deputy Dean (Research), JAIN University', image: beemsir }
+    { name: 'Dr.N. Beemkumar', role: 'Deputy Dean (Research), JAIN University', image: beemsir }
   ];
 
   const honoraryMembers = [
-    { name: 'Dr. K. Elangovan ', role: 'Honorary Mentor of GRI and Assistant Innovation Director, Innovation Cell Ministry of Education', image: chair1 },
-    { name: 'Dr. Gurubalan Annadurai ', role: 'Honorary Mentor of GRI and Assistant Professor, Department of Energy Science and Engineering(IIT Bombay)', image: chair2 },
-    { name: 'Mr. K. S. Rajamanokar ', role: 'Honorary Mentor of GRI and CEO of Aquaconnect, Chennai', image: chair3 }
+    { name: 'Dr. K. Elangovan ', role: 'Assistant Innovation Director, Innovation Cell Ministry of Education', image: chair1 },
+    { name: 'Dr. Gurubalan Annadurai ', role: 'Assistant Professor, Department of Energy Science and Engineering(IIT Bombay)', image: chair2 },
+    { name: 'Mr. K. S. Rajamanokar ', role: 'CEO of Aquaconnect, Chennai', image: chair3 }
   ];
 
 
