@@ -41,19 +41,17 @@ export default function Home(){
           <div style={{display:'flex', flexDirection:'column', gap:'20px'}}>
             <p style={{fontSize:'clamp(16px, 1.4vw, 18px)', lineHeight:'1.6', color:'var(--text)', margin:0, maxWidth:'800px'}}>
               <span style={{fontSize:'clamp(20px, 1.8vw, 22px)', fontWeight:'600', color:'var(--brand)', display:'block', marginBottom:'10px'}}>Grassroots Research and Innovation (GRI)</span> 
-              at Jain University serves as a vital platform that integrates academic research with valuable insights from rural communities. This initiative emphasizes the development of sustainable and cost-effective solutions tailored to address specific local challenges.
-            </p>
+              Grassroots Innovation is about learning directly from communities — especially in villages — by observing how people creatively address everyday challenges with limited resources and immense wisdom.</p>
             
             <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))', gap:'20px', marginTop:'10px'}}>
               <div style={{background:'rgba(var(--brand-rgb), 0.05)', padding:'20px', borderRadius:'8px', border:'1px solid rgba(var(--brand-rgb), 0.1)'}}>
                 <h3 style={{fontSize:'18px', marginTop:0, color:'var(--brand)'}}>Our Mission</h3>
-                <p style={{margin:0, fontSize:'15px'}}>To bridge the gap between academic knowledge and rural needs through collaborative research and innovation that creates sustainable impact.</p>
+                <p style={{margin:0, fontSize:'15px'}}>To create a transformative learning experience where students engage with nearby villages, learn from the lived wisdom of local communities, and develop meaningful, sustainable solutions to real-world challenges through empathy, innovation, and collaboration.</p>
               </div>
-              
+
               <div style={{background:'rgba(var(--brand-rgb), 0.05)', padding:'20px', borderRadius:'8px', border:'1px solid rgba(var(--brand-rgb), 0.1)'}}>
                 <h3 style={{fontSize:'18px', marginTop:0, color:'var(--brand)'}}>Our Approach</h3>
-                <p style={{margin:0, fontSize:'15px'}}>By fostering active engagement between students and community members, GRI provides a unique experiential learning environment through immersive, hands-on involvement and co-creation.</p>
-              </div>
+                <p style={{margin:0, fontSize:'15px'}}> The initiative adopts a participatory and experiential learning approach, integrating the concept of AI vs AI — Artificial Intelligence versus Ancestral Intelligence. Students will visit nearby villages to interact with communities, observe traditional practices, and understand how ancestral wisdom offers sustainable, people-centric solutions. By combining these insights with modern technological tools and artificial intelligence, students will explore innovative approaches to real-world challenges. </p></div>
             </div>
           </div>
         </div>
@@ -65,26 +63,38 @@ export default function Home(){
             <small style={{color:'var(--muted)'}}>What we do</small>
             <h2>Activities</h2>
           </div>
-          <Link to="/activities" className="btn ghost">Explore</Link>
         </div>
         <div className="card-grid">
           {[
-            {t:'Field Immersions', d:'Community visits and need finding across rural clusters to identify authentic local challenges.'},
-            {t:'Workshops', d:'Capacity building, design thinking, and frugal innovation sessions to develop practical skills.'},
-            {t:'Prototyping', d:'Rapid prototyping and low-cost solution development with direct community feedback.'},
-          ].map((c,i)=> (
-            <article className="card" key={i} style={{transition:'transform 0.3s ease'}}>
-              <div style={{position:'relative', overflow:'hidden'}}>
-                <img
-                  src={homeImages[i % homeImages.length].src}
-                  alt={homeImages[i % homeImages.length].caption}
-                  loading="lazy"
-                  style={{maxWidth:'100%', height:'auto', transition:'transform 0.5s ease'}}
-                />
-              </div>
-              <div className="body">
-                <h3>{c.t}</h3>
-                <p>{c.d}</p>
+            {
+              t: 'Grassroots Innovation Learning',
+              d: 'Learning directly from communities — especially in villages — by observing how people creatively address everyday challenges with limited resources and immense wisdom.'
+            },
+            {
+              t: 'Village Visits & Field Research',
+              d: 'Students visit nearby villages to learn from the lived experiences of common people, gain life lessons, and understand local problems that demand thoughtful solutions.'
+            },
+            {
+              t: 'Observing Innovative Practices',
+              d: 'Through field visits, students observe innovative practices emerging from the grassroots and apply their own critical and innovative thinking.'
+            },
+            {
+              t: 'Design Solutions',
+              d: 'Design solutions that bridge classroom knowledge with real-world needs, connecting education with empathy, engineering with society, and innovation with purpose.'
+            },
+            {
+              t: 'Community Immersions',
+              d: 'Field research, interviews, and need discovery with rural stakeholders.'
+            },
+            {
+              t: 'Design Workshops',
+              d: 'Hands-on sessions on design thinking and low-cost prototyping.'
+            },
+          ].map((a,i)=> (
+            <article key={i} className="card">
+              <div className="body" style={{textAlign:'center'}}>
+                <h3>{a.t}</h3>
+                <p>{a.d}</p>
               </div>
             </article>
           ))}
@@ -194,10 +204,7 @@ export default function Home(){
               maxWidth: '800px',
               padding: '0 15px'
             }}>
-              GRI connects academic expertise with rural wisdom to create sustainable, impactful solutions. 
-              Our collaborative approach has engaged 10+ communities, launched 25+ student projects, 
-              and implemented 5+ solutions through 1000+ meaningful interactions.
-            </p>
+             GRI connects academic expertise with rural wisdom to create sustainable and impactful solutions. Our collaborative approach engages communities, launches student-led projects, and implements meaningful solutions through continuous and meaningful interactions.  </p>
             
             <div className="cta-buttons" style={{
               display: 'flex',
