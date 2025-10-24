@@ -1,8 +1,8 @@
-- [ ] Update admin dashboard styles in pages.css to match website design
-- [ ] Update admin dashboard styles in notifications.css to match website design
-- [ ] Ensure consistent use of design tokens (--brand, --bg, --panel, etc.)
-- [ ] Replace gradient header with clean design
-- [ ] Update buttons to use consistent styling
-- [ ] Update tabs to match website navigation style
-- [ ] Test mobile responsiveness
-- [x] Implement authentication-based notification visibility (notifications only shown to logged-in users)
+# TODO: Update Team Roles and Commit to GitHub
+
+- [x] Edit src/pages/Team.jsx to replace "Chair Member" with "Chair Person" in the chairMember role
+- [x] Edit src/pages/Team.jsx to replace "Co-Chair Member" with "Co-Chair Person" in the coChairMember role
+- [x] Edit src/pages/Team.jsx to replace "Honorary Member of GRI" with "Honorary Mentor of GRI" in all honoraryMembers roles
+- [x] Fix spacing for team section headings to prevent overlapping
+- [x] Commit the changes to Git
+- [x] Push the changes to GitHub
