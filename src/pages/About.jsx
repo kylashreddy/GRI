@@ -12,10 +12,7 @@ export default function About(){
         </div>
         <div className="card" style={{padding:16}}>
           <p>
-            Grassroot Innovation (GRI) at Jain University fosters community-led innovation by
-            bridging academic research with rural insights. We focus on sustainable, frugal
-            solutions that address local needs, while enabling students to learn through hands-on
-            immersion and co-creation.
+            Grassroots Innovation is about learning directly from communities — especially in villages — by observing how people creatively address everyday challenges with limited resources and immense wisdom.
           </p>
         </div>
       </section>

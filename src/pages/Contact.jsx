@@ -88,14 +88,14 @@ export default function Contact(){
         <article className="card">
           <div className="body" style={{textAlign:'center'}}>
             <h3>Address</h3>
-            <p>Jain University<br />Bengaluru, Karnataka 560069<br />India</p>
+            <p>JAIN (Deemed-to-be-University)<br />45th km, NH - 209,Jakkasandra Post, Bengaluru - Kanakapura Rd, Bengaluru, Karnataka 562112<br />India</p>
           </div>
         </article>
         
         <article className="card">
           <div className="body" style={{textAlign:'center'}}>
             <h3>Email</h3>
-            <p><a href="mailto:gri@jainuniversity.ac.in" style={{color:'var(--brand)'}}>gri@jainuniversity.ac.in</a></p>
+            <p><a href="mailto:griresearch.jain@gmail.com" style={{color:'var(--brand)'}}>griresearch.jain@gmail.com</a></p>
           </div>
         </article>
         
