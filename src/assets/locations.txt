@@ -1,0 +1,21 @@
+Source,Destination,Distance
+Kr Pura,Halsuru,5
+Kr Pura,KR Market,10
+Kr Pura,Indiranagar,6
+Halsuru,Indiranagar,3
+Halsuru,Domlur,4
+Indiranagar,Domlur,2
+Domlur,Ejipura,3
+Ejipura,Koramangala,4
+Koramangala,HSR Layout,5
+HSR Layout,BTM Layout,3
+BTM Layout,JP Nagar,4
+JP Nagar,Jayanagar,3
+Jayanagar,KR Market,6
+KR Market,Majestic,2
+Majestic,Shivajinagar,4
+Shivajinagar,VV Pura,5
+VV Pura,Basavanagudi,3
+Basavanagudi,Chickpet,2
+Chickpet,City Railway,3
+City Railway,Majestic,2

@@ -55,10 +55,11 @@ export default function Team(){
 
   return (
     <div className="team-container">
-      <div className="section-heading" style={{textAlign: 'center'}}>
+      <div className="section-heading" style={{textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
         <div>
-          <small>People</small>
+          <small style={{textAlign: 'center', display: 'block'}}>People</small>
           <h2>Our Team</h2>
+          <p style={{color: 'var(--muted)', maxWidth: '600px', fontSize: '16px', lineHeight: '1.6', marginTop: '16px'}}>Discover the <strong>people</strong> driving innovation: our visionary leaders, dedicated faculty, and enthusiastic students working together to create impactful solutions.</p>
         </div>
       </div>
 
@@ -84,30 +85,6 @@ export default function Team(){
               <p style={{textAlign: 'center'}}>{honoraryChair[0].role}</p>
             </div>
           </div>
-        </div>
-
-        {/* Honorary members */}
-        <h3>Honorary Mentors</h3>
-        <div className="honourable-grid">
-          {honoraryMembers.map((member, index) => (
-            <div key={index} className="honourable-card">
-              <div className="honourable-color-bar"></div>
-              <div className="honourable-content">
-                <div className="honourable-avatar">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.parentElement.innerHTML = `<span style="font-size: 28px; font-weight: bold; color: var(--brand);">${member.name.charAt(0)}</span>`;
-                    }}
-                  />
-                </div>
-                <h4>{member.name}</h4>
-                <p>{member.role}</p>
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* Chair */}
@@ -152,6 +129,30 @@ export default function Team(){
               <p style={{textAlign: 'center'}}>{coChairMember[0].role}</p>
             </div>
           </div>
+        </div>
+
+        {/* Honorary members */}
+        <h3>Honorary Mentors</h3>
+        <div className="honourable-grid">
+          {honoraryMembers.map((member, index) => (
+            <div key={index} className="honourable-card">
+              <div className="honourable-color-bar"></div>
+              <div className="honourable-content">
+                <div className="honourable-avatar">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.parentElement.innerHTML = `<span style="font-size: 28px; font-weight: bold; color: var(--brand);">${member.name.charAt(0)}</span>`;
+                    }}
+                  />
+                </div>
+                <h4>{member.name}</h4>
+                <p>{member.role}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

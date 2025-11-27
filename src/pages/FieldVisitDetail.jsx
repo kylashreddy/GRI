@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { pastVisits } from './FieldVisit';
 
 export default function FieldVisitDetail() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [visit, setVisit] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const handleBackToFieldVisits = () => {
+    navigate('/fieldvisit');
+  };
 
   useEffect(() => {
     // Find the visit with the matching ID
@@ -211,6 +216,32 @@ export default function FieldVisitDetail() {
             </div>
           </section>
         </div>
+      </div>
+
+      <div style={{ textAlign: 'center', marginTop: '40px' }}>
+        <button onClick={handleBackToFieldVisits} style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          background: 'var(--brand)',
+          color: 'white',
+          padding: '12px 24px',
+          borderRadius: '8px',
+          border: 'none',
+          fontWeight: '600',
+          boxShadow: '0 4px 15px rgba(var(--brand-rgb), 0.3)',
+          transition: 'all 0.3s ease',
+          cursor: 'pointer'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'translateY(-3px)';
+          e.currentTarget.style.boxShadow = '0 8px 20px rgba(var(--brand-rgb), 0.4)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 4px 15px rgba(var(--brand-rgb), 0.3)';
+        }}>
+          <span style={{ marginRight: '8px' }}>←</span> Back to Field Visits
+        </button>
       </div>
     </div>
   );

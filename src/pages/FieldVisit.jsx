@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { homeImages } from '../assets/galleryData';
 import { Link } from 'react-router-dom';
+import visit2Image from '../assets/2.jpg';
 
 // Export pastVisits for use in FieldVisitDetail
 export const pastVisits = [
@@ -13,6 +14,20 @@ export const pastVisits = [
     reportPath: "c:\\Users\\Admin\\Downloads\\GRI\\Report on GRI Visit 1.docx",
     highlights: [
       "Documented traditional Ragi cultivation methods",
+      "Studied silk worm rearing practices",
+      "Analyzed local flower production supply chain"
+    ]
+  },
+  {
+    title: "Visit-2 - Paduvanagere",
+    date: "2025-11-22",
+    location: "Paduvanagere",
+    description: "Our team conducted a comprehensive field visit to Paduvanagere, focusing on community development, education, and agricultural practices. We engaged with local stakeholders to understand various challenges and opportunities in the region.",
+    image: visit2Image,
+    reportPath: "c:\\Users\\Admin\\Downloads\\GRI\\Report on GRI Visit 2.docx",
+    highlights: [
+      "Observed school related issues",
+      "Traditional Ragi cultivation methods",
       "Studied silk worm rearing practices",
       "Analyzed local flower production supply chain"
     ]
