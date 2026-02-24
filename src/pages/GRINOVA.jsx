@@ -164,11 +164,10 @@ GRINOVA (Grassroots Innovation Ideathon) is a flagship event organized by GRI (C
                 Event Schedule
               </h3>
               <div style={{display:'grid', gap:12}}>
-                {[
+{[
                   { date: 'February 24, 2026', event: 'Registration Opens' },
                   { date: 'March 10, 2026', event: 'Registration Closes' },
-                  { date: 'March 15, 2026', event: 'Teams Announced' },
-                  { date: 'March 20-21, 2026', event: 'Ideathon Finals' },
+                  { date: 'March 12, 2026', event: 'Ideathon Event' },
                 ].map((item, i) => (
                   <div key={i} style={{
                     display:'flex', justifyContent:'space-between', 
