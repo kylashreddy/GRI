@@ -1,12 +1,15 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { homeImages } from '../assets/galleryData'
 import MarqueeGallery from '../components/MarqueeGallery'
 
 export default function Home(){
-  const navigate = useNavigate()
   const topRow = homeImages.slice(0, Math.ceil(homeImages.length/2))
   const bottomRow = homeImages.slice(Math.ceil(homeImages.length/2))
+  
+  const navigateToGRINOVA = () => {
+    window.location.href = '/grinova'
+  }
 
   return (
     <div className="grid" style={{gap:32}}>
@@ -97,7 +100,7 @@ export default function Home(){
               gap: '12px'
             }}>
               <button 
-                onClick={() => navigate('/grinova')}
+                onClick={navigateToGRINOVA}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -119,7 +122,7 @@ export default function Home(){
                 Register Now →
               </button>
               <button 
-                onClick={() => navigate('/grinova')}
+                onClick={navigateToGRINOVA}
                 style={{
                   color: '#6b7280',
                   fontSize: '14px',
