@@ -9,10 +9,133 @@ export default function Home(){
 
   return (
     <div className="grid" style={{gap:32}}>
+      {/* GRINOVA 2026 Announcement Banner - First Section */}
+      <section>
+        <div className="card" style={{
+          padding: 0,
+          overflow: 'hidden',
+          border: '1px solid var(--border)',
+          borderRadius: '16px',
+          background: 'linear-gradient(135deg, #fafbfb 0%, #f3f4f6 100%)'
+        }}>
+          {/* Top accent bar */}
+          <div style={{
+            height: '6px',
+            background: 'linear-gradient(90deg, #1f2937 0%, #374151 50%, #1f2937 100%)',
+            width: '100%'
+          }}></div>
+          
+          {/* Content */}
+          <div style={{
+            padding: '40px 30px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '24px'
+          }}>
+            <div style={{flex: '1', minWidth: '280px'}}>
+              <div style={{
+                display: 'inline-block',
+                background: '#1f2937',
+                padding: '6px 14px',
+                borderRadius: '4px',
+                marginBottom: '16px',
+                fontSize: '12px',
+                fontWeight: '600',
+                color: 'white',
+                letterSpacing: '0.5px',
+                textTransform: 'uppercase'
+              }}>
+                New Event Announcement
+              </div>
+              <h2 style={{
+                fontSize: 'clamp(28px, 3.5vw, 38px)',
+                fontWeight: '700',
+                color: '#111827',
+                marginBottom: '12px',
+                lineHeight: 1.2
+              }}>
+                GRINOVA 2026
+              </h2>
+              <p style={{
+                fontSize: 'clamp(14px, 1.3vw, 16px)',
+                color: '#4b5563',
+                marginBottom: '16px',
+                lineHeight: 1.6,
+                maxWidth: '550px'
+              }}>
+                Ideathon for Rural Impact — A platform for students to develop innovative solutions for rural communities through research and collaboration.
+              </p>
+              <div style={{
+                display: 'flex',
+                gap: '24px',
+                flexWrap: 'wrap',
+                fontSize: '14px',
+                color: '#6b7280'
+              }}>
+                <span style={{display:'flex', alignItems:'center', gap: '6px'}}>
+                  <strong style={{color:'#111827'}}>Registration:</strong> Feb 24 - March 10, 2026
+                </span>
+                <span style={{display:'flex', alignItems:'center', gap: '6px'}}>
+                  <strong style={{color:'#111827'}}>Venue:</strong> Jain University, Bangalore
+                </span>
+                <span style={{display:'flex', alignItems:'center', gap: '6px'}}>
+                  <strong style={{color:'#111827'}}>Prize Pool:</strong> Rs.25,000
+                </span>
+                <span style={{display:'flex', alignItems:'center', gap: '6px'}}>
+                  <strong style={{color:'#111827'}}>Teams:</strong> Top 10 Awarded
+                </span>
+              </div>
+            </div>
+            
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              gap: '12px'
+            }}>
+              <Link to="/grinova" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#1f2937',
+                color: 'white',
+                padding: '12px 24px',
+                borderRadius: '8px',
+                fontWeight: '600',
+                fontSize: '15px',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease',
+              }}>
+                Register Now →
+              </Link>
+              <Link to="/grinova" style={{
+                color: '#6b7280',
+                fontSize: '14px',
+                textDecoration: 'none',
+                borderBottom: '1px solid #d1d5db',
+                transition: 'color 0.2s ease'
+              }}>
+                View Details
+              </Link>
+            </div>
+          </div>
+          
+          {/* Bottom accent bar */}
+          <div style={{
+            height: '4px',
+            background: 'linear-gradient(90deg, #1f2937 0%, #374151 50%, #1f2937 100%)',
+            width: '100%'
+          }}></div>
+        </div>
+      </section>
+
+      {/* Hero Section - Second */}
       <section className="hero">
         <div>
           <div className="hero-tag">GRI • Jain University</div>
-          <h1>Grassroots Research and Innovation for Rural Impact</h1>
+<h1>Center of Grassroots Research and Innovation for Rural Impact</h1>
           <p>
             We partner with rural communities to co-create sustainable solutions through research,
             student engagement, and frugal innovation. Explore our activities, projects, and impact.
@@ -40,7 +163,7 @@ export default function Home(){
         <div className="card about-card" style={{padding:'30px', background:'linear-gradient(135deg, #fafbfc 0%, #f8f9fa 100%)', border:'1px solid var(--border)', animation:'fadeInUp 0.6s ease-out 0.4s both', borderRadius:'12px', boxShadow:'0 4px 20px rgba(0,0,0,0.05)'}}>
           <div style={{display:'flex', flexDirection:'column', gap:'20px'}}>
             <p style={{fontSize:'clamp(16px, 1.4vw, 18px)', lineHeight:'1.6', color:'var(--text)', margin:0, maxWidth:'800px'}}>
-              <span style={{fontSize:'clamp(20px, 1.8vw, 22px)', fontWeight:'600', color:'var(--brand)', display:'block', marginBottom:'10px'}}>Grassroots Research and Innovation (GRI)</span> 
+<span style={{fontSize:'clamp(20px, 1.8vw, 22px)', fontWeight:'600', color:'var(--brand)', display:'block', marginBottom:'10px'}}>Center of Grassroots Research and Innovation (GRI)</span>
               Grassroots Innovation is about learning directly from communities — especially in villages — by observing how people creatively address everyday challenges with limited resources and immense wisdom.</p>
             
             <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))', gap:'20px', marginTop:'10px'}}>
