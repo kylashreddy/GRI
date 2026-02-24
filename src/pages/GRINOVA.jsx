@@ -139,11 +139,12 @@ GRINOVA (Grassroots Innovation Ideathon) is a flagship event organized by GRI (C
                 Problem Statement Domains
               </h3>
               <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(180px, 1fr))', gap:12}}>
-                {[
+{[
                   { domain: 'Agriculture', icon: '🌾', desc: 'Sustainable farming & rural livelihood' },
                   { domain: 'Eldercare', icon: '👴', desc: 'Healthcare solutions for elderly in rural areas' },
                   { domain: 'Hydroponics', icon: '🪴', desc: 'Soilless farming & urban agriculture' },
-                  { domain: 'Healthcare', icon: '🏥', desc: 'Rural health & wellness innovations' }
+                  { domain: 'Healthcare', icon: '🏥', desc: 'Rural health & wellness innovations' },
+                  { domain: 'Sericulture', icon: '🐛', desc: 'Silk farming & textile innovations for rural economy' }
                 ].map((item, i) => (
                   <div key={i} style={{
                     padding:'16px', 
@@ -365,11 +366,12 @@ GRINOVA (Grassroots Innovation Ideathon) is a flagship event organized by GRI (C
                   borderRadius:8, fontSize:16, outline:'none', transition:'border-color 0.2s',
                   background:'white'}}
               >
-                <option value="">Select a Domain</option>
+<option value="">Select a Domain</option>
                 <option value="Agriculture">Agriculture</option>
                 <option value="Eldercare">Eldercare</option>
                 <option value="Hydroponics">Hydroponics</option>
                 <option value="Healthcare">Healthcare</option>
+                <option value="Sericulture">Sericulture</option>
               </select>
             </div>
 
