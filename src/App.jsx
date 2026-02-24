@@ -13,6 +13,7 @@ import FieldVisit from './pages/FieldVisit'
 import FieldVisitDetail from './pages/FieldVisitDetail'
 import AdminDashboard from './pages/AdminDashboard'
 import UserLogin from './pages/UserLogin'
+import GRINOVA from './pages/GRINOVA'
 
 import PageTransition from './shared/PageTransition'
 import SectionHeading from './shared/SectionHeading'
@@ -188,6 +189,7 @@ export default function App(){
           <Route path="login" element={<PageTransition><UserLogin/></PageTransition>} />
           {/* Admin routes - both admin and user login through /login page */}
           <Route path="admin" element={<AdminDashboard />} />
+          <Route path="grinova" element={<PageTransition><GRINOVA/></PageTransition>} />
         </Routes>
       </AnimatePresence>
       <Footer />

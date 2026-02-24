@@ -1,8 +1,6 @@
-# TODO: Update Team Roles and Commit to GitHub
+# TODO - GRINOVA Event Registration Page
 
-- [x] Edit src/pages/Team.jsx to replace "Chair Member" with "Chair Person" in the chairMember role
-- [x] Edit src/pages/Team.jsx to replace "Co-Chair Member" with "Co-Chair Person" in the coChairMember role
-- [x] Edit src/pages/Team.jsx to replace "Honorary Member of GRI" with "Honorary Mentor of GRI" in all honoraryMembers roles
-- [x] Fix spacing for team section headings to prevent overlapping
-- [x] Commit the changes to Git
-- [x] Push the changes to GitHub
+- [x] Create GRINOVA event registration page (src/pages/GRINOVA.jsx)
+- [x] Add route in App.jsx for /grinova
+- [x] Add creative announcement banner in Home.jsx below hero heading
+- [x] Test the implementation

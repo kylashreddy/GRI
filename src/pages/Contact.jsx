@@ -33,16 +33,20 @@ export default function Contact(){
     setSubmitStatus(null)
 
     try {
-      // Add message to Firebase
-      await addDoc(collection(db, 'contact_us'), {
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        createdAt: serverTimestamp(),
-        read: false
+      // Submit to Google Apps Script with no-cors mode
+      await fetch('https://script.google.com/macros/s/AKfycbyTV9qMLlBVCqIGniW_CPWHNw6-Yp7U5tJk881nLXZdJwtOHaCfbJhFb65ZBLdZqyCH/exec', {
+        method: 'POST',
+        redirect: 'follow',
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          type: 'contact'
+        })
       })
-
+      
+      // Since Google Apps Script returns opaque response, we assume success after the request completes
       setSubmitStatus({ 
         type: 'success', 
         message: 'Message sent successfully! We will get back to you soon.' 
