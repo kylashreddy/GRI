@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { homeImages } from '../assets/galleryData'
 import MarqueeGallery from '../components/MarqueeGallery'
 
 export default function Home(){
+  const navigate = useNavigate()
   const topRow = homeImages.slice(0, Math.ceil(homeImages.length/2))
   const bottomRow = homeImages.slice(Math.ceil(homeImages.length/2))
 
@@ -95,30 +96,44 @@ export default function Home(){
               alignItems: 'flex-start',
               gap: '12px'
             }}>
-              <Link to="/grinova" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: '#1f2937',
-                color: 'white',
-                padding: '12px 24px',
-                borderRadius: '8px',
-                fontWeight: '600',
-                fontSize: '15px',
-                textDecoration: 'none',
-                transition: 'all 0.2s ease',
-              }}>
+              <button 
+                onClick={() => navigate('/grinova')}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: '#1f2937',
+                  color: 'white',
+                  padding: '12px 24px',
+                  borderRadius: '8px',
+                  fontWeight: '600',
+                  fontSize: '15px',
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              >
                 Register Now →
-              </Link>
-              <Link to="/grinova" style={{
-                color: '#6b7280',
-                fontSize: '14px',
-                textDecoration: 'none',
-                borderBottom: '1px solid #d1d5db',
-                transition: 'color 0.2s ease'
-              }}>
+              </button>
+              <button 
+                onClick={() => navigate('/grinova')}
+                style={{
+                  color: '#6b7280',
+                  fontSize: '14px',
+                  textDecoration: 'none',
+                  borderBottom: '1px solid #d1d5db',
+                  transition: 'color 0.2s ease',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: 0,
+                }}
+              >
                 View Details
-              </Link>
+              </button>
             </div>
           </div>
           
